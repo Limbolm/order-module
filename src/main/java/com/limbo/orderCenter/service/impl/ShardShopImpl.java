@@ -1,22 +1,19 @@
 package com.limbo.orderCenter.service.impl;
 
+import com.limbo.orderCenter.service.ShardShopService;
+
 /**
+ * 维度索引
  * Created by Administrator on 2018/4/1 0001.
  */
-public class ShardShopImpl<T> {
-    /**
-     * 根据Id查询
-     * @param map
-     * @return
-     * @throws Exception
-     */
-    T findById(T map)throws Exception;
+public class ShardShopImpl<T> implements ShardShopService{
+    @Override
+    public Object findById(Object map) throws Exception {
+        return null;
+    }
 
-    /**
-     * 新增
-     * @param map
-     * @return
-     * @throws Exception
-     */
-    int insert(T map)throws Exception;
+    @Override
+    public int insert(Object map) throws Exception {
+        return 0;
+    }
 }

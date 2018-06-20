@@ -1,17 +1,16 @@
 package com.limbo.orderCenter.mapper;
 
 import com.limbo.orderCenter.entity.Comment;
+import com.sun.tools.javac.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 /**
- * Created by Administrator on 2018/1/5 0005.
+ * Created by Administrator on 2018/4/10 0010.
  */
 public interface CommentMapper {
 
     /**
-     * 根据条件查询评论信息
+     * 根据id 查询评论
      * @return
      */
     List<Comment> queryCommentByInfo(Comment comment);
@@ -23,5 +22,10 @@ public interface CommentMapper {
      */
     int insertComment(@Param("comment") Comment comment);
 
+    /**
+     * 更新评论
+     * @param comment
+     * @return
+     */
     int updateComment(@Param("comment") Comment comment);
 }

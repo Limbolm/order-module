@@ -2,7 +2,6 @@ package com.limbo.orderCenter.service.impl;
 
 import com.limbo.orderCenter.entity.Goods;
 import com.limbo.orderCenter.mapper.GoodsMapper;
-import com.limbo.orderCenter.mapper.OrderMapper;
 import com.limbo.orderCenter.service.GoodsService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

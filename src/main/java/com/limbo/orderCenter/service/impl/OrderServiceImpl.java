@@ -1,11 +1,10 @@
 package com.limbo.orderCenter.service.impl;
 
+import com.limbo.orderCenter.entity.Order;
 import com.limbo.orderCenter.mapper.OrderMapper;
 import com.limbo.orderCenter.service.OrderService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
-
 import java.util.List;
 
 /**
@@ -33,7 +32,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     protected String buildOrderId(){
-        StringBuilder orderId = new StringBuilder();
+        String orderId = new String();
         
         return orderId;
     }

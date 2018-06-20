@@ -10,7 +10,7 @@ import java.util.Date;
  *  state订单状态
  * Created by Administrator on 2018/4/1 0001.
  */
-public class shardShop {
+public class ShardShop {
     private String id;
     private String shopId;
     private String dbId;

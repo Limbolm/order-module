@@ -1,21 +1,16 @@
 package com.limbo.orderCenter.mapper;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.limbo.orderCenter.entity.Order;
+import com.sun.tools.javac.util.List;
+import org.apache.ibatis.annotations.Param;
 
 /**
- * 用户信息 mapper
- * @author  ray
- * @date 2017/11/19
+ * Created by Administrator on 2018/4/10 0010.
  */
-@Repository
 public interface OrderMapper {
     /**
-     * 根据条件查询订单信息
+     * 根据id 查询订单
      * @return
      */
     List<Order> queryOrderByInfo(Order order);
@@ -23,11 +18,14 @@ public interface OrderMapper {
     /**
      * 新增订单
      * @param order
-     * @return
+     ** @return
      */
     int insertOrder(@Param("order") Order order);
 
+    /**
+     * 更新订单
+     * @param order
+     ** @return
+     */
     int updateOrder(@Param("order") Order order);
-
-
 }

@@ -3,7 +3,7 @@ package com.limbo.orderCenter.service;
 /**
  * Created by Administrator on 2018/4/1 0001.
  */
-public interface OrderMagLogService<T> {
+public interface OrderMsgLogService<T> {
 
     /**
      * 根据Id查询
