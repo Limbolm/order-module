@@ -1,22 +1,33 @@
 package com.limbo.orderCenter.service;
 
+import com.limbo.orderCenter.entity.ShardShop;
+
+import java.util.List;
+
 /**
  * Created by Administrator on 2018/4/1 0001.
  */
-public interface ShardShopService<T> {
+public interface ShardShopService {
     /**
      * 根据Id查询
-     * @param map
+     * @param shardShop
      * @return
      * @throws Exception
      */
-    T findById(T map)throws Exception;
+    List<ShardShop> findById(ShardShop shardShop)throws Exception;
 
     /**
      * 新增
-     * @param map
+     * @param shardShop
      * @return
      * @throws Exception
      */
-    int insert(T map)throws Exception;
+    int insert(ShardShop shardShop)throws Exception;
+
+    /**
+     * 更新维度索引
+     * @param shardShop
+     * @return
+     */
+    int updateShardShop(ShardShop shardShop);
 }

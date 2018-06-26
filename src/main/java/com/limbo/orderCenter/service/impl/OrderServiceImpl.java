@@ -3,6 +3,7 @@ package com.limbo.orderCenter.service.impl;
 import com.limbo.orderCenter.entity.Order;
 import com.limbo.orderCenter.mapper.OrderMapper;
 import com.limbo.orderCenter.service.OrderService;
+import com.limbo.orderCenter.util.SnowflakeIdWorker;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
@@ -31,9 +32,9 @@ public class OrderServiceImpl implements OrderService{
         return orderMapper.updateOrder(order);
     }
 
-    protected String buildOrderId(){
-        String orderId = new String();
-        
+    protected long buildOrderId(){
+        SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
+        long orderId = idWorker.nextId();
         return orderId;
     }
 }
